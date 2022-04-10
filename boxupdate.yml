@@ -1,0 +1,155 @@
+open_command: boxupdate
+
+size: 27
+
+menu_title: '&f&l| &6&l囚禁大陆 空间升级菜单'
+
+# open_requirement:
+#   requirements:
+#     permission:
+#       type: has permission
+#       permission: deluxemenus.admin
+#       deny_commands:
+#         - '[message] &c你莫得权限!'
+
+items:
+  'wall1':
+    material: black_Stained_Glass_Pane
+    data: 1
+    display_name: " "
+    slots: 
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 9
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 26
+  'close':
+    material: Barrier
+    data: 1
+    display_name: "&c关闭"
+    slot: 8
+    left_click_commands:
+      - '[close]'
+  
+  '4_5':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzZmODNjM2RiMTNkMjJlZmIxZTUyNDU2OGJiN2Y2OGRmZmU4ZWNjY2UxZDAwZjg3YWE1OGI1ZWZkZjg5YWI1MSJ9fX0=
+    data: 1
+    display_name: "&3升级到&6 5 个人"
+    lore:
+     - '&a需要 1000 金币'
+     - '&b当前团队人数限制: &c%boxed_island_members_max% 人'
+     - '&d请按照人数递增升级,重复点击依然扣金币'
+    left_click_requirement:
+      requirements:
+        one:
+          type: has permission
+          permission: 'boxed.team.maxsize.4'
+        two:
+          type: has money
+          amount: 1000
+        # three:
+          # type: !has permission
+          # permission: 'boxed.team.maxsize.5'
+        four:
+          type: javascript
+          expression: '%boxed_island_members_max% == 4'
+      deny_commands:
+        - '[message] &4升级失败：金币不足 或 您已升级'
+    slot: 10
+    left_click_commands:
+      - '[takemoney] 1000'
+      - '[console] manuaddp %player_name% boxed.team.maxsize.5'
+      - '[message] &a&l已花费 1000 金币将团队人数升级到 5 人'
+  '5_6':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjA3NjBiNTMyMzAzNWQxNDg2NWVjZGY5NTVjOTIwNmNiOGRkNTBkOWU5M2Y2ZDU5NmU3MjUwZGU1NDVjZGE1ZSJ9fX0=
+    data: 1
+    display_name: "&3升级到&6 6 个人"
+    lore:
+     - '&a需要 5000 金币'
+     - '&b当前团队人数限制: &c%boxed_island_members_max% 人'
+     - '&d请按照人数递增升级,重复点击依然扣金币'
+    left_click_requirement:
+      requirements:
+        one:
+          type: has permission
+          permission: 'boxed.team.maxsize.5'
+        two:
+          type: has money
+          amount: 5000
+        four:
+          type: javascript
+          expression: '%boxed_island_members_max% == 5'
+      deny_commands:
+        - '[message] &4升级失败：金币不足 或 您已升级'
+    slot: 11
+    left_click_commands:
+      - '[takemoney] 5000'
+      - '[console] manuaddp %player_name% boxed.team.maxsize.6'
+      - '[message] &a&l已花费 5000 金币将团队人数升级到 6 人'
+  '6_7':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjQ2ZDlhMGZiYWZlNzcwZDgwMGZmNGNhM2RiNTVmMTU5ZGI4ZDZjOGM3ZDU4NGE0NTg5NjAxMDM2NWM0MDZlZSJ9fX0=
+    data: 1
+    display_name: "&3升级到&6 7 个人"
+    lore:
+     - '&a需要 20000 金币'
+     - '&b当前团队人数限制: &c%boxed_island_members_max% 人'
+     - '&d请按照人数递增升级,重复点击依然扣金币'
+    left_click_requirement:
+      requirements:
+        one:
+          type: has permission
+          permission: 'boxed.team.maxsize.6'
+        two:
+          type: has money
+          amount: 20000
+        four:
+          type: javascript
+          expression: '%boxed_island_members_max% == 6'
+      deny_commands:
+        - '[message] &4升级失败：金币不足 或 您已升级'
+    slot: 12
+    left_click_commands:
+      - '[takemoney] 20000'
+      - '[console] manuaddp %player_name% boxed.team.maxsize.7'
+      - '[message] &a&l已花费 20000 金币将团队人数升级到 7 人'
+  '7_8':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmRiZGFjM2VjYzhmMDUzOTMyYTE3MDc2ZDVkNTM0MjE0N2YxODcyYzk3ODMwZmQ0NWY4YzUxMzc0ZjEwNGQ5ZCJ9fX0=
+    data: 1
+    display_name: "&3升级到&6 8 个人"
+    lore:
+     - '&a需要 50000 金币'
+     - '&b当前团队人数限制: &c%boxed_island_members_max% 人'
+     - '&d请按照人数递增升级,重复点击依然扣金币'
+    left_click_requirement:
+      requirements:
+        one:
+          type: has permission
+          permission: 'boxed.team.maxsize.7'
+        two:
+          type: has money
+          amount: 50000
+        four:
+          type: javascript
+          expression: '%boxed_island_members_max% == 7'
+      deny_commands:
+        - '[message] &4升级失败：金币不足 或 您已升级'
+    slot: 13
+    left_click_commands:
+      - '[takemoney] 50000'
+      - '[console] manuaddp %player_name% boxed.team.maxsize.8'
+      - '[message] &a&l已花费 50000 金币将团队人数升级到 8 人'
+# boxed.team.maxsize.[NUMBER]
